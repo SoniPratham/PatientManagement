@@ -2,21 +2,20 @@ package com.example.demo.model;
 
 import lombok.Builder;
 import lombok.Getter;
-import lombk.ToString;
 
-import javax.persistence.Entity;o
+import javax.persistence.Entity;
 import javax.persistence.Id;
 
 
-@Entity
-@Getter
-@ToString
 @Builder
+@Entity
 public class PatientRecord {
     @Id
     public Long patientId;
-    Integer age;
-    public String name, address;
+
+    public String name;
+    public Integer age;
+    public String address;
 
     public PatientRecord() {
     }
