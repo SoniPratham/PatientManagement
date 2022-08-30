@@ -47,5 +47,4 @@ public class PatientRecordController {
         patientRecordRepository.save(patientRecordObj);
         return patientRecordRepository.findAll();
     }
-
 }
