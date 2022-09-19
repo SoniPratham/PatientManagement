@@ -24,12 +24,7 @@ public class PatientRecordController {
         return patientRecordRepository.findById(id).get();
     }
 
-    // Delete the patientRecord
-    @DeleteMapping("/patientRecord/{id}")
-    public List<PatientRecord> deletePatientRecord(@PathVariable Long id) {
-        patientRecordRepository.delete(patientRecordRepository.findById(id).get());
-        return patientRecordRepository.findAll();
-    }
+   
 
     // Add new patientRecord
     @PostMapping("/patientRecord")
@@ -37,6 +32,9 @@ public class PatientRecordController {
         patientRecordRepository.save(patientRecord);
         return patientRecordRepository.findAll();
     }
+    
+    
+    
 
     // Update the patientRecord information
     @PutMapping("/patientRecord/{id}")
